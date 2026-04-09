@@ -258,7 +258,7 @@ namespace io {
         m_caps.write=0;
         m_caps.seek=0;
     }
-    file_stream::file_stream(File& file) : m_file(&file){
+    file_stream::file_stream(FsFile& file) : m_file(&file){
         if(!file) {
             m_caps.read=0;
             m_caps.write=0;
@@ -280,10 +280,10 @@ namespace io {
     }
     file_stream::~file_stream() {
     }
-    File* file_stream::handle() const {
+    FsFile* file_stream::handle() const {
         return m_file;
     }
-    void file_stream::set(File& file) {
+    void file_stream::set(FsFile& file) {
         if(!file) {
             m_caps.read = m_caps.write = m_caps.seek = 0;
         } else {

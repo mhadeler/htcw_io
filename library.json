@@ -17,7 +17,7 @@
     "repository":
     {
         "type": "git",
-        "url": "https://github.com/codewitch-honey-crisis/htcw_io.git"
+        "url": "https://github.com/mhadeler/htcw_io.git"
     },
     "dependencies": {
         "codewitch-honey-crisis/htcw_bits": "^1.0.17"

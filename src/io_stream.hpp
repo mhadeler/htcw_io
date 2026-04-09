@@ -144,7 +144,7 @@ namespace io {
 #ifndef IO_NO_FS
     class file_stream final : public stream {
 #ifdef ARDUINO
-        File* m_file;
+        FsFile* m_file;
 #else
         FILE* m_fd;
 #endif
@@ -154,12 +154,12 @@ namespace io {
     public:
         file_stream();
 #ifdef ARDUINO
-        file_stream(File& file);
+        file_stream(FsFile& file);
         file_stream(file_stream&& rhs);
         file_stream& operator=(file_stream&& rhs);
         ~file_stream();
-        File* handle() const;
-        void set(File& file);
+        FsFile* handle() const;
+        void set(FsFile& file);
         virtual size_t read(uint8_t* destination,size_t size);
         virtual int getch();
         virtual size_t write(const uint8_t* source,size_t size);
