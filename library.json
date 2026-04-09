@@ -20,6 +20,7 @@
         "url": "https://github.com/mhadeler/htcw_io.git"
     },
     "dependencies": {
+        "greiman/SdFat": "^2.3.1",
         "codewitch-honey-crisis/htcw_bits": "^1.0.17"
     }
 }
